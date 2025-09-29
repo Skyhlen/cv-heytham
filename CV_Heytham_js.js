@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300 * index);
   });
 
+  // Effet sur les liens de contact
   const contactLinks = document.querySelectorAll(".contact a");
   contactLinks.forEach(link => {
     link.addEventListener("mouseover", () => {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Animation spécifique à l'iframe PDF
   const pdfFrame = document.querySelector(".portfolio iframe");
   if (pdfFrame) {
     pdfFrame.style.opacity = 0;
@@ -43,3 +45,19 @@ function mettreAJourHorloge() {
 
 setInterval(mettreAJourHorloge, 1000);
 mettreAJourHorloge();
+
+const boutonTheme = document.getElementById('toggle-theme');
+const iconeTheme = document.getElementById('theme-icon');
+
+boutonTheme.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    iconeTheme.src = 'sun.png';
+    iconeTheme.alt = 'Passer en mode clair';
+  } else {
+    iconeTheme.src = 'moon.png';
+    iconeTheme.alt = 'Passer en mode sombre';
+  }
+});
+
