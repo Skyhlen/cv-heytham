@@ -9,6 +9,7 @@ body {
 }
 
 header {
+  background-image: url("fond_cv_head.png");
   background-color: #222;
   color: #fff;
   text-align: center;
@@ -103,4 +104,5 @@ section h2:hover {
 
 .profil {
   display:flex;
+
 }
