@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300 * index);
   });
 
-  // Effet sur les liens de contact
   const contactLinks = document.querySelectorAll(".contact a");
   contactLinks.forEach(link => {
     link.addEventListener("mouseover", () => {
@@ -21,5 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const pdfFrame = document.querySelector(".portfolio iframe");
+  if (pdfFrame) {
+    pdfFrame.style.opacity = 0;
+    pdfFrame.style.transition = "opacity 1s ease";
+    setTimeout(() => {
+      pdfFrame.style.opacity = 1;
+    }, sections.length * 300);
+  }
+
   console.log("Bienvenue sur le CV interactif de Heytham !");
 });
+
+function mettreAJourHorloge() {
+  const maintenant = new Date();
+  const heures = maintenant.getHours().toString().padStart(2, '0');
+  const minutes = maintenant.getMinutes().toString().padStart(2, '0');
+  const secondes = maintenant.getSeconds().toString().padStart(2, '0');
+  const heureElement = document.getElementById('heure');
+  heureElement.textContent = `${heures}:${minutes}:${secondes}`;
+}
+
+setInterval(mettreAJourHorloge, 1000);
+mettreAJourHorloge();
