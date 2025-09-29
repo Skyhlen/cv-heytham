@@ -78,7 +78,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
@@ -104,5 +103,54 @@ section h2:hover {
 
 .profil {
   display:flex;
-
 }
+
+
+.portfolio {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  border-left: 4px solid #ffcc00;
+  border-radius: 4px;
+}
+
+.portfolio h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.portfolio iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+#horloge {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icone-horloge {
+  width: 40px;
+  height: 40px;
+}
+
