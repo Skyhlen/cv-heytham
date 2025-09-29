@@ -222,4 +222,11 @@ body.dark-mode footer {
   color: #f0f0f0;
 }
 
+.non-selectionnable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 
